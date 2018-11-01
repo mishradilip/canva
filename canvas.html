@@ -1,0 +1,779 @@
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!--<![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<style type="text/css">
+*,
+ :before,
+ :after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ :before,
+ :after {
+  content: '';
+  clear: both;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.header-form-input {
+  width: 100%
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: url(images/body-bg-blur.jpg) 0 0 / cover;
+  overflow-x: hidden;
+}
+
+.pic img,
+.forgot-password-form {
+  display: none;
+}
+
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  padding: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.menu-list li {
+  display: inline-block;
+}
+
+.menu-list li.menu-icon {
+  display: none;
+}
+
+.menu-list li a {
+  border: 0;
+  background: none;
+  font-size: 14px;
+  display: inherit;
+  color: #fff;
+  color: rgba(255, 255, 255, .8);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.enduser-block {
+  width: 65%;
+  max-width: 666px;
+}
+
+.form-group {
+  display: inline-block;
+  max-width: 190px;
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 5px;
+}
+
+.form-group .error,
+.error {
+  clear: both;
+  width: 100%;
+  color: #dd4b39;
+  font-size: 12px;
+}
+
+.header-form-input {
+  border-radius: 5px;
+  font-size: 14px;
+  border: 1px solid #eaeaea;
+  margin: 1px;
+  background: #fff;
+  background: rgba(255, 255, 255, .1);
+  padding: 9px;
+  color: #fff;
+  outline: none;
+  transition: background-color .2s ease;
+  float: left;
+}
+
+.form-group+.form-group {
+  margin-left: 10px;
+}
+
+.header-form-submitButton {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.header-form-submitButton,
+.header-form-submitOptionsButton,
+.header-form-secondaryButton,
+.header-logInLink {
+  font-size: 14px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  border: 2px solid transparent;
+  outline-width: 0;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-logInLink,
+.header-form-submitButton {
+  background: #99c432;
+  margin: 1px 0 1px 10px;
+  padding: 9px 18px;
+  vertical-align: top;
+}
+
+.header-form-secondaryButton {
+  padding: 10px 18px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 5px;
+  outline-width: 0;
+  transition: background-color .2s ease;
+}
+
+.signupFormContainer {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.signupFormContainer-inner {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.signupForm-signupButtons {
+  border: none;
+}
+
+.signupForm {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 30%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 10px;
+  height: 250px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.signupForm-form {
+  padding-bottom: 25px;
+  min-width: 230px;
+  max-width: 260px;
+}
+
+.signupForm img:first-child {
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+.signupForm img {
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.signupFormContainer-quotes {
+  padding-left: 40px;
+  max-width: 350px;
+  min-width: 300px;
+  width: 100%;
+}
+
+.form-withLogo .form-logo {
+  cursor: pointer;
+}
+
+.form-withLogo .form-logo img {
+  max-width: 100%;
+}
+
+.signupForm .form-title {
+  white-space: normal;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.form-title {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3f4652;
+}
+
+.form-orDivider {
+  margin: 10px 0;
+  text-align: center;
+  font-family: Georgia, Times New Roman, serif;
+  font-style: italic;
+  opacity: 0.5;
+  font-weight: 300;
+  color: #9fa3a9;
+}
+
+.form-footnote {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #9fa3a9;
+  text-align: center;
+}
+
+.form-footnote a {
+  color: inherit;
+}
+
+.quotes {
+  color: #fff;
+  text-shadow: 0 1px 2px #444;
+}
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: #99c432;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  min-width: 2.78572em;
+  line-height: 2.78572;
+  outline-width: 0;
+  padding: 0 1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .15s, border-color .15s, color .15s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button i {
+  float: left;
+  line-height: 39px;
+}
+
+.buttonFacebook {
+  background-color: #3b5998;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.buttonGoogle {
+  background-color: #dd4b39;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.buttonBlock {
+  display: block;
+  width: 100%;
+}
+
+.quotes-quote-important {
+  font-size: 22px;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.quotes-cite {
+  display: block;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.quotes-quote {
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.enduser-registration-form {
+  display: none;
+}
+
+.forgot-password-form .form-group {
+  max-width: none;
+}
+
+.signup-form-group .form-control,
+.forgot-password-form .form-control {
+  display: block;
+  height: 30px;
+  text-indent: 5px;
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 6px;
+  box-shadow: none;
+}
+
+.forgot-password-form .form-control {
+  border: 1px solid #ddd;
+}
+
+.signup-form-group.first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.signup-form-group.last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-submit {
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  height: 30px;
+  background-color: #99c432;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.forgot-password-form {
+  position: absolute;
+  right: 20px;
+  top: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer-block {
+  background-color: rgba(0, 0, 0, 0.37);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  z-index: 1;
+}
+
+.footer-menu-list {
+  text-align: center;
+}
+
+.footer-menu-list li {
+  display: inline-block;
+}
+
+.footer-menu-list li a {
+  border: 0;
+  background: none;
+  font-size: 14px;
+  display: inherit;
+  color: #fff;
+  color: rgba(255, 255, 255, .8);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+span.field-error,
+label.error {
+  color: red;
+  font-size: 12px;
+  float: left;
+}
+
+@media (max-width: 992px) and (min-width: 768px) {}
+
+@media (max-width: 992px) {
+  .menu-list,
+  .enduser-block {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-list li.menu-icon {
+    display: inline-block;
+    font-size: 20px;
+  }
+  .header-form {
+    display: none;
+  }
+  .body-wrapper {
+    padding-top: 90px;
+  }
+  .form-group+.form-group {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .forgot-password-form {
+    position: static;
+    background: transparent;
+  }
+  .signupFormContainer {
+    position: static;
+    transform: translate(0, 0);
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+  }
+  .signupFormContainer-inner {
+    display: inline-block;
+    max-width: 400px;
+  }
+  .signupFormContainer-inner .signupForm,
+  .signupFormContainer-quotes {
+    width: 100%;
+    max-width: none;
+    display: block;
+    padding: 15px;
+  }
+}
+</style>
+<script type="text/javascript">
+{% if enduserauth %}
+  location.href = 'javascript:void(0)';
+{% endif %}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/csrft.js"></script>
+<div class="body-wrapper">
+  <header>
+    <div class="container">
+      <ul class="pull-left menu-list">
+        <li><a href="/aboutus/">About</a></li>
+        <li><a href="javascript:void(0)">Shop Online</a></li>
+        <li class="menu-icon"><a href="javascript:;"><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="pull-right enduser-block">
+        <form class="header-form enduser-login-form" name="enduser_login_form" id="login_form" action="/user/login/" method="post" novalidate="" autocomplete="off"> <input name="csrfmiddlewaretoken" type="hidden" value="" class="csrf-token">
+          <div class="form-group"> <input class="header-form-input" name="email" type="text" placeholder="Username/Email" required=""> </div>
+          <div class="form-group"> <input class="header-form-input" name="password" type="password" placeholder="Password" required=""> </div> <button class="header-form-submitButton" type="submit">Log in</button> <a href="javascript:void(0);" class="header-form-secondaryButton js-forgot-password">Forgot password?</a> </form>
+        <form class="forgot-password-form" name="forgot_password_form" id="forgot_password_form" novalidate="novalidate" action="/user/forgot-password/" method="post"> <input name="csrfmiddlewaretoken" type="hidden" value="" class="csrf-token">
+          <p class="form-group"> <input id="id_email" class="form-control" maxlength="70" name="email" type="email" placeholder="Email" required=""> </p> <button class="btn-submit" type="submit">Submit</button> </form>
+      </div>
+    </div>
+  </header>
+  <div class="pic"> <img src="images/body-bg.jpg"> </div>
+  <div class="signupFormContainer">
+    <div class="signupFormContainer-inner" style="text-align: center;">
+      <div class="signupForm signupForm-collapsed"> <a href="/aboutus" style="text-decoration: none; color: #666; font-size: 15px; font-weight: 600;">
+          <img src="https://via.placeholder.com/55X55/red" alt=""> <img src="//gmas-custom-files.s3.amazonaws.com/zoom16/zoom%20assets/abtus.png" alt="">
+          <p>New to Zoom16 ?</p>
+          <p style="font-weight: 500; font-size: 12px;">Read more about us</p>
+        </a> </div>
+      <div class="signupForm signupForm-collapsed "> <a href="javascript:void(0)" style="text-decoration: none; color: #666; font-size: 15px; font-weight: 600;">
+        <img src="https://via.placeholder.com/55X55/red" alt="">
+          <img src="//gmas-custom-files.s3.amazonaws.com/zoom16/zoom%20assets/welcome.png" alt="">
+          <p>Welcome to Zoom16</p>
+        </a> </div>
+      <div class="signupForm signupForm-collapsed "> <a href="javascript:void(0)" style="text-decoration: none; color: #666; font-size: 15px; font-weight: 600;">
+          <img src="https://via.placeholder.com/55X55/green" alt=""> <img src="//gmas-custom-files.s3.amazonaws.com/zoom16/zoom%20assets/photographer.png" alt="">
+            <p>Find a Photographer</p>
+        </a> </div>
+      <div class="signupForm signupForm-collapsed ">
+      <a href="/p/zoom-cell-phone-repair/" style="text-decoration: none; color: #666; font-size: 15px; font-weight: 600;">
+        <img src="https://via.placeholder.com/55X55/yellow" alt=""> <img src="//gmas-custom-files.s3.amazonaws.com/zoom16/zoom%20assets/mobile%20repair.png" alt="">
+          <p>Cell phone Repair</p>
+      </a>
+      </div>
+      <div class="signupForm signupForm-collapsed ">
+        <a href="/p/zoom-health-care/" style="text-decoration: none; color: #666; font-size: 15px; font-weight: 600;">
+          <img src="https://via.placeholder.com/55X55/black" alt=""> <img src="//gmas-custom-files.s3.amazonaws.com/zoom16/zoom%20assets/healthcareico.png" alt="">
+            <p>Healthcare</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-block">
+    <ul class="footer-menu-list">
+      <li><a href="/faqs/">Faqs</a></li>
+      <li><a href="/privacy-policy/">Privacy</a></li>
+      <li><a href="/disclaimer-policy/">Disclaimer</a></li>
+      <li><a href="/tnc/">Terms &amp; Conditions</a></li>
+      <li><a href="/shipping-delivery-policy/">Shipping &amp; Delivery</a></li>
+      <li><a href="/cancellation-refund-policy/">Cancellation &amp; Refund</a></li>
+    </ul>
+  </footer>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var csrf_token = '{{ csrf_token }}';
+});
+$('.signupForm-buttonEmail').on('click', function() {
+  $('.signupForm-signupButtons').hide();
+  $('.enduser-registration-form').slideDown();
+});
+$('.js-forgot-password').on('click', function() {
+  $('.forgot-password-form').toggleClass('open').slideToggle();
+  if ($(window).width() < 768) {
+    $('.enduser-login-form').hide();
+  }
+});
+$('.menu-icon').on('click', function() {
+  if ($('.forgot-password-form').hasClass('open')) {
+    $('.forgot-password-form').slideUp().removeClass('open');
+    $('.enduser-login-form').slideUp();
+  } else {
+    $('.enduser-login-form').slideToggle();
+  }
+});
+//Form submit
+$('#login_form, #enduser_registration, #forgot_password_form').submit(function(e) {
+  e.preventDefault();
+  var current_form = this;
+  if ($(this).valid()) {
+    var data = $(this).serialize();
+    var url = $(this).attr('action');
+    $.ajax({
+      url: url,
+      method: 'POST',
+      data: data,
+      success: function() {
+        $.notify('Successfully submitted');
+        setTimeout(function() {
+          location.href = 'javascript:void(0)';
+        }, 1000);
+      },
+      error: function(xhr) {
+        if (xhr.status == 400) {
+          var data = JSON.parse(xhr.responseText);
+          var fields = Object.keys(data);
+          if (fields.length) {
+            var i = 0;
+            var ele = {};
+            for (i = 0; i < fields.length; i += 1) {
+              if (fields[i] == '__all__') {
+                $.notify(data[fields[i]], 'error');
+              } else {
+                ele = $($(current_form).find('[name="' + fields[i] + '"]'));
+                ele.addClass('error');
+                if (ele.attr("type") == 'checkbox') {
+                  ele.parent().after('<br/><span class="field-error"> ' + data[fields[i]] + '</span>');
+                } else {
+                  ele.after('<span class="field-error"> ' + data[fields[i]] + '</span>');
+                }
+              }
+            }
+          }
+          $.notify('Please fill correct credentials', 'error');
+        } else if (xhr.status == 500) {
+          $.notify('Something went wrong. Please try again later.', 'error');
+        } else if (xhr.status == 403) {
+          $.notify('Something went wrong. Please refresh and try again.', 'error');
+        }
+      }
+    })
+  }
+});
+var image = document.querySelector('img');
+var imageCanvas = document.createElement('canvas');
+var imageCanvasContext = imageCanvas.getContext('2d');
+var lineCanvas = document.createElement('canvas');
+var lineCanvasContext = lineCanvas.getContext('2d');
+var pointLifetime = 1000;
+var points = [];
+if (image.complete) {
+  start();
+} else {
+  image.onload = start;
+}
+/**
+ * Attaches event listeners and starts the effect.
+ */
+function start() {
+  document.addEventListener('mousemove', onMouseMove);
+  window.addEventListener('resize', resizeCanvases);
+  document.body.appendChild(imageCanvas);
+  resizeCanvases();
+  tick();
+}
+/**
+ * Records the user's cursor position.
+ *
+ * @param {!MouseEvent} event
+ */
+function onMouseMove(event) {
+  points.push({
+    time: Date.now(),
+    x: event.clientX,
+    y: event.clientY
+  });
+}
+/**
+ * Resizes both canvases to fill the window.
+ */
+function resizeCanvases() {
+  imageCanvas.width = lineCanvas.width = window.innerWidth;
+  imageCanvas.height = lineCanvas.height = window.innerHeight;
+}
+/**
+ * The main loop, called at ~60hz.
+ */
+function tick() {
+  // Remove old points
+  points = points.filter(function(point) {
+    var age = Date.now() - point.time;
+    return age < pointLifetime;
+  });
+  drawLineCanvas();
+  drawImageCanvas();
+  requestAnimationFrame(tick);
+}
+/**
+ * Draws a line using the recorded cursor positions.
+ *
+ * This line is used to mask the original image.
+ */
+function drawLineCanvas() {
+  var minimumLineWidth = 25;
+  var maximumLineWidth = 100;
+  var lineWidthRange = maximumLineWidth - minimumLineWidth;
+  var maximumSpeed = 50;
+  lineCanvasContext.clearRect(0, 0, lineCanvas.width, lineCanvas.height);
+  lineCanvasContext.lineCap = 'round';
+  lineCanvasContext.shadowBlur = 30;
+  lineCanvasContext.shadowColor = '#000';
+  for (var i = 1; i < points.length; i++) {
+    var point = points[i];
+    var previousPoint = points[i - 1];
+    // Change line width based on speed
+    var distance = getDistanceBetween(point, previousPoint);
+    var speed = Math.max(0, Math.min(maximumSpeed, distance));
+    var percentageLineWidth = (maximumSpeed - speed) / maximumSpeed;
+    lineCanvasContext.lineWidth = minimumLineWidth + percentageLineWidth * lineWidthRange;
+    // Fade points as they age
+    var age = Date.now() - point.time;
+    var opacity = (pointLifetime - age) / pointLifetime;
+    lineCanvasContext.strokeStyle = 'rgba(0, 0, 0, ' + opacity + ')';
+    lineCanvasContext.beginPath();
+    lineCanvasContext.moveTo(previousPoint.x, previousPoint.y);
+    lineCanvasContext.lineTo(point.x, point.y);
+    lineCanvasContext.stroke();
+  }
+}
+
+function getDistanceBetween(a, b) {
+  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
+}
+/**
+ * Draws the original image, masked by the line drawn in drawLineToCanvas.
+ */
+function drawImageCanvas() {
+  // Emulate background-size: cover
+  var width = imageCanvas.width;
+  var height = imageCanvas.width / image.naturalWidth * image.naturalHeight;
+  if (height < imageCanvas.height) {
+    width = imageCanvas.height / image.naturalHeight * image.naturalWidth;
+    height = imageCanvas.height;
+  }
+  imageCanvasContext.clearRect(0, 0, imageCanvas.width, imageCanvas.height);
+  imageCanvasContext.globalCompositeOperation = 'source-over';
+  imageCanvasContext.drawImage(image, 0, 0, width, height);
+  imageCanvasContext.globalCompositeOperation = 'destination-in';
+  imageCanvasContext.drawImage(lineCanvas, 0, 0);
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js"></script>
+<script>
+$.notify.defaults({
+  className: "success",
+  globalPosition: "top center",
+});
+</script>
